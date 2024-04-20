@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AdvertisementsModule } from './advertisements/advertisements.module';
+import { RegionsModule } from './regions/regions.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { AdvertisementsModule } from './advertisements/advertisements.module';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    RegionsModule,
     AdvertisementsModule,
   ],
   controllers: [AppController],
